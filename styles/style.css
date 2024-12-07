@@ -172,12 +172,21 @@ ol {
   border: #fff 1px solid;
   width: 19px;
   height: 19px;
-  position: relative;
 }
 
 .search-form__checkbox-list .search-form__pseudo-checkbox:active {
-  outline: #1b1919 2px solid;
-  outline-offset: -3px;
+  outline: #1b1919 1px solid;
+  outline-offset: -2px;
+  background-color: #fff;
+}
+
+.search-form__checkbox:checked + .search-form__pseudo-checkbox::before{
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  margin: 1px 1px 1px 1px;
+  width: 15px;
+  height: 15px;
   background-color: #fff;
 }
 
@@ -220,7 +229,7 @@ ol {
 }
 
 .more-button {
-  /* margin-top: 30px; */
+  margin-top: 30px;
   width: 100%;
 }
 
@@ -274,6 +283,11 @@ ol {
   outline-offset: -1px;
 }
 
+/* В активном состоянии ссылки карточки нужно изменять цвет фона по макету */
+.content__card-link:active {
+  background-color: #545050;
+}
+
 .content__card-link_current {
   background-color: #545050;
 }
@@ -305,13 +319,14 @@ ol {
   min-height: 107px;
 }
 
-/* .content__list .content__list-item:not(:nth-last-child(2)) {
-  margin-bottom: 30px;
-} */
-
-.content__list .content__list-item {
+/* Последней карточке в группе нужно сбросить нижний отступ */
+.content__list .content__list-item:not(:nth-last-child(2)) {
   margin-bottom: 30px;
 }
+
+/* .content__list .content__list-item {
+  margin-bottom: 30px;
+} */
 
 .content__video-card-thumbnail {
   width: 194px;
