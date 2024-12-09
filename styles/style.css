@@ -206,6 +206,7 @@ ol {
   border: currentColor 1px solid;
   font-family: inherit;
   font-size: inherit;
+  font-weight: 700;
 }
 
 .button:hover {
@@ -305,7 +306,7 @@ ol {
   /* Оформить текст */
   font-family: "Oswald", sans-serif;
   font-size: 30px;
-  font-weight: 400;
+  font-weight: 700;
   line-height: 100%;
   width: 100%;
   text-transform: uppercase;
@@ -332,7 +333,7 @@ ol {
 }
 
 /* селектор last-of-type почему то не работает  когда в списке есть кнопка хотя у неё класса нет*/
-/* .content__list-item:not(.content__list-item:last-of-type) {
+/* .content__list-item:not(:last-of-type) {
   margin-bottom: 30px;
   border: red solid 5px;
 } */
