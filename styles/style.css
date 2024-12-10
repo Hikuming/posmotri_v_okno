@@ -233,7 +233,6 @@ ol {
 }
 
 .more-button {
-  margin-top: 30px;
   width: 100%;
 }
 
@@ -327,16 +326,9 @@ ol {
   min-height: 107px;
 }
 
-/* Последней карточке в группе нужно сбросить нижний отступ */
-.content__list-item:not(:nth-of-type(5)) {
+.content__list-item:not(:last-of-type) {
   margin-bottom: 30px;
-}
-
-/* селектор last-of-type почему то не работает  когда в списке есть кнопка хотя у неё класса нет*/
-/* .content__list-item:not(:last-of-type) {
-  margin-bottom: 30px;
-  border: red solid 5px;
-} */
+} 
 
 .content__video-card-thumbnail {
   width: 194px;
